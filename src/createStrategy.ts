@@ -25,7 +25,7 @@ export default ({shouldAcceptIncomingResponse, shouldUseIncomingResponse}: Strat
                     ...previousQuery,
                     pendingMutex: previousQuery.pendingMutex - 1,
                     nextResponse: response,
-                }
+                },
             };
         }
 
@@ -38,7 +38,7 @@ export default ({shouldAcceptIncomingResponse, shouldUseIncomingResponse}: Strat
                 pendingMutex: previousQuery.pendingMutex - 1,
                 response: override ? response : previousQuery.response,
                 nextResponse: null,
-            }
+            },
         };
     };
 
@@ -103,6 +103,6 @@ export default ({shouldAcceptIncomingResponse, shouldUseIncomingResponse}: Strat
                     nextResponse: null,
                 },
             };
-        }
-    }
-}
+        },
+    };
+};
