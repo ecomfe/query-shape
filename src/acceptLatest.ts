@@ -1,4 +1,3 @@
-import createStrategy from './createStrategy';
 import {StrategyOptions} from '../types/index';
 
 const options: StrategyOptions = {
