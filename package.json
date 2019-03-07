@@ -22,7 +22,7 @@
   "devDependencies": {
     "@types/fast-json-stable-stringify": "^2.0.0",
     "fast-json-stable-stringify": "^2.0.0",
-    "reskript": "^0.8.0"
+    "reskript": "^0.10.0"
   },
   "dependencies": {}
 }
