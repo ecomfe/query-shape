@@ -1,6 +1,6 @@
 {
   "name": "query-shape",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "cjs/index.js",
   "module": "es/index.js",
   "sideEffects": false,
