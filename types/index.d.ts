@@ -33,3 +33,14 @@ export interface StrategyOptions {
 export interface FindQuery {
     <TKey, TData, TError>(querySet: QuerySet<TKey, TData, TError>, key: TKey): Query<TKey, TData, TError> | undefined;
 }
+
+export interface CreateStrategy {
+    (options: StrategyOptions): QueryStrategy;
+}
+
+export const findQuery: FindQuery;
+export const createStrategy: CreateStrategy;
+export const acceptLatest: StrategyOptions;
+export const keepEarliest: StrategyOptions;
+export const keepEarliestSuccess: StrategyOptions;
+export const waitAccept: StrategyOptions;

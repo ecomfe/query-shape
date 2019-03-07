@@ -1,9 +1,7 @@
 import stringify from 'fast-json-stable-stringify';
-import {QuerySet, Query, Response, QueryStrategy, StrategyOptions} from '../types/index';
+import {QuerySet, Response, CreateStrategy} from '../types/index';
 
-type Determine = (previous: Response<any, any>, current: Response<any, any>) => boolean;
-
-export default ({shouldAcceptIncomingResponse, shouldUseIncomingResponse}: StrategyOptions): QueryStrategy => {
+const createStrategy: CreateStrategy = ({shouldAcceptIncomingResponse, shouldUseIncomingResponse}) => {
     const autoAssign = <TKey, TData, TError>(
         querySet: QuerySet<TKey, TData, TError>,
         key: TKey,
@@ -106,3 +104,5 @@ export default ({shouldAcceptIncomingResponse, shouldUseIncomingResponse}: Strat
         },
     };
 };
+
+export default createStrategy;
